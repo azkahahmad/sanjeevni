@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Sanjeevni — AI Health Companion</title>
+<title>Sanjeevani — AI Health Companion</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Syne:wght@700;800;900&display=swap');
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -55,7 +55,7 @@ textarea{resize:none}
   animation: scanline 2.5s infinite ease-in-out;
 }
 
-/* === SANJEEVNI PREMIUM WHITE / HERITAGE DESIGN SYSTEM === */
+/* === SANJEEVANI PREMIUM WHITE / HERITAGE DESIGN SYSTEM === */
 :root{
   --sp-ink:#1d2822;--sp-muted:#727c75;--sp-green:#2f5d45;--sp-green-2:#3b6e54;
   --sp-gold:#aa8a52;--sp-ivory:#fbfaf7;--sp-line:#e7e3da;--sp-soft:#f5f4ee;
@@ -347,13 +347,13 @@ const userDetails = savedUser ? JSON.parse(savedUser) : null;
 
 // Seed the prototype with the intended demo profile so an older saved profile
 // cannot bring back a previous placeholder name.
-const DEMO_USER = {name:"Vidit Maheshwari", age:"19", blood:"B+", phone:userDetails?.phone||""};
+const DEMO_USER = {name:"Vidit", age:"19", blood:"B+", phone:userDetails?.phone||""};
 if (userDetails) localStorage.setItem('sanjeevni_user', JSON.stringify({...userDetails,...DEMO_USER}));
 FAMILY[0].name=DEMO_USER.name;
 FAMILY[0].age=parseInt(DEMO_USER.age);
 FAMILY[0].blood=DEMO_USER.blood;
 
-const SANJEEVNI_PATIENT_ID='SJ-PATIENT-01';
+const SANJEEVANI_PATIENT_ID='SJ-PATIENT-01';
 // Patient-side vault isolation: never import doctor-demo records for another patient.
 try {
   const stored=JSON.parse(localStorage.getItem('arogya_records')||'null');
@@ -2046,11 +2046,11 @@ window.saveScannedRecord = () => {
 .doctor-content{overflow-x:hidden}
 </style>
 <script>
-/* ═════════════ SANJEEVNI DOCTOR PORTAL ═════════════ */
+/* ═════════════ SANJEEVANI DOCTOR PORTAL ═════════════ */
 const DOCTOR_APP={
   mode:false,loggedIn:false,loginError:'',tab:'overview',patient:null,patientTab:'overview',queueFilter:'all',rxRows:[],rxDiagnosis:'',rxNotes:'',rxFollow:'',templateName:'',templates:[],scannerActive:false,scanTimer:null
 };
-const DOCTOR_ME={name:'Dr. Ananya Mehta',specialty:'Ophthalmologist',clinic:'Sanjeevni Eye & Vision Centre',location:'Sector 62, Noida',reg:'UPMC/2026/04821',email:'doctor@sanjeevni.health'};
+const DOCTOR_ME={name:'Dr. Ananya Mehta',specialty:'Ophthalmologist',clinic:'Sanjeevani Eye & Vision Centre',location:'Sector 62, Noida',reg:'UPMC/2026/04821',email:'doctor@sanjeevani.health'};
 const DOCTOR_PATIENTS=[
  {id:'SJ-1048',token:'A-14',name:'Aarav Sharma',age:28,sex:'Male',blood:'O+',phone:'+91 98••• 4218',allergies:['Penicillin'],conditions:['Myopia','Dry eye'],meds:['Refresh Tears','Lubricant drops'],last:'18 Sep 2026',visit:'Eye check-up',vitals:{bp:'118/76',pulse:'72 bpm',spo2:'99%',weight:'69 kg'},labs:[['12 Sep 2026','Visual acuity','R 6/6 · L 6/9'],['12 Sep 2026','IOP','R 16 · L 17 mmHg'],['03 Jun 2026','Lipid profile','Within reference range']],notes:['Reports evening eye strain after prolonged screen use. No flashes or floaters.'],
  history:[['18 Sep 2026','Ophthalmology','Refraction reviewed; lubricating drops advised.'],['03 Jun 2026','General medicine','Routine health screening completed.'],['21 Nov 2025','Ophthalmology','Myopia stable; blue-filter lens discussed.']]},
@@ -2153,7 +2153,7 @@ window.openDoctorPortal=openDoctorPortal;
 const _oldBuildLoginWelcome=buildLoginWelcome;
 buildLoginWelcome=function(){const html=_oldBuildLoginWelcome();return html.replace('</div>\n  </div>`;','</div>\n  </div>`;');};
 /* Inject a persistent doctor-access chip into patient login screens. */
-// Doctor access is now handled by the unified Sanjeevni role chooser and in-app workspace switcher.
+// Doctor access is now handled by the unified Sanjeevani role chooser and in-app workspace switcher.
 </script>
 <script>render();</script>
 </body>
